@@ -50,8 +50,10 @@
           console.log('Is this user registered?' + this.userIsRegistered)
           if (this.userIsRegistered) {
             this.$store.dispatch('unregisterUserFromMeetup', this.meetupId)
+            this.registerDialog = false
           } else {
             this.$store.dispatch('registerUserForMeetup', this.meetupId)
+            this.registerDialog = false
             console.log('Successful Register')
           }
         }

@@ -34,7 +34,7 @@
                             <div class="text-lg-right">
                             <v-card-actions class="pr-0 mr-0">
                                 <v-spacer></v-spacer>
-                                <app-register-dialog :meetupId="meetup.id"></app-register-dialog>
+                                <app-register-dialog :meetupId="meetup.id" v-if="userIsAuthenticated && !userIsCreator"></app-register-dialog>
                             </v-card-actions>
                             </div>
                         </v-flex>
